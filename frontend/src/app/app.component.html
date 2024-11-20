@@ -1,2 +1,57 @@
+<!-- Header Section -->
 <app-navbar></app-navbar>
-<router-outlet></router-outlet>
+<!-- Header End -->
+
+<!-- Main Section -->
+<main class="main | container">
+  
+  <!-- Hero Section -->
+  <section class="container py-4">
+    <div class="row align-items-center">
+      <div class="hero-text | col-lg-6 col-md-12 mb-4">
+        <h1 class="hero-title | py-4">
+          PostDocs
+        </h1>
+        <p class="fs-3"> 
+          Free fake REST posts API for testing and prototyping.
+          <br>
+          Powered by 
+          <a href="https://www.djangoproject.com/" target="_blank">
+            Django
+          </a>
+          + 
+          <a href="https://www.sqlite.org/" target="_blank">
+            Sqlite
+          </a>
+          .
+        </p>
+
+        <div class="py-2 my-2 d-flex gap-2">
+          <a href="https://github.com/Tobboki/PostDocs" class="btn btn-dark fw-semibold" target="_blank">
+            View on Github
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <a [routerLink]="" class="btn btn-primary fw-semibold">
+            Read Docs
+            <i class="fa-solid fa-book"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="hero-img | col-lg-6 col-md-12 text-center">
+        <img class="img-fluid img-blob" src="../assets/illustrations/posts_illustration.png" alt="Posts illustrations" width="380" height="380">
+      </div>
+
+    </div>
+  </section>
+  <!-- Hero End -->
+
+  <!-- Outlet Section -->
+  <section class="container">
+    <router-outlet></router-outlet>
+  </section>
+  <!-- Outlet End -->
+</main>
+<!-- Main End -->

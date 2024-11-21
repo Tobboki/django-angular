@@ -1,0 +1,75 @@
+<!-- *Main Section* -->
+<main class="main | container mt-5">
+  
+  <!-- *Hero Section* -->
+  <section class="container py-4">
+    <div class="row align-items-center">
+      <div class="hero-text | col-lg-6 col-md-12 mb-4">
+        <h1 class="hero-title | py-4">
+          PostDocs
+        </h1>
+        <p class="fs-3"> 
+          Free fake REST posts API for testing and prototyping.
+          <br>
+          Powered by 
+          <a href="https://www.djangoproject.com/" target="_blank">
+            Django
+          </a>
+          + 
+          <a href="https://www.sqlite.org/" target="_blank">
+            Sqlite
+          </a>
+          .
+        </p>
+
+        <div class="py-2 my-2 d-flex gap-2">
+          <a href="https://github.com/Tobboki/PostDocs" class="btn btn-dark fw-semibold" target="_blank">
+            View on Github
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <a [routerLink]="" class="btn btn-primary fw-semibold">
+            Read Docs
+            <i class="fa-solid fa-book"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="hero-img | col-lg-6 col-md-12 text-center">
+        <img class="img-fluid img-blob" src="../assets/illustrations/posts_illustration.png" alt="Posts illustrations" width="380" height="380">
+      </div>
+
+    </div>
+  </section>
+  <!-- Hero End -->
+
+  <!-- *Resources Section* -->
+  <section class="container">
+    <div class="container my-5">
+      <h2 class="mb-3">Resources</h2>
+      <p>PostDocs comes with a set of 3 common resources:</p>
+      <ul class="list-group mb-3">
+        <li class="list-group-item">
+          <a href="" target="_blank">/posts</a> - 200 posts
+        </li>
+        <li class="list-group-item">
+          <a href="" target="_blank">/comments</a> - 100 comments
+        </li>
+        <li class="list-group-item">
+          <a href="" target="_blank">/users</a> - 15 users
+        </li>
+      </ul>
+      <div class="bg-warning-subtle px-2">
+        <p class="text-muted">
+          <strong>Note:</strong>
+          Resources have relations. For example: users have many posts, ... 
+          <a class="link-primary link-underline-primary" [routerLink]="['guide']">see guide</a> for the full list.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Resources End -->
+
+</main>
+<!-- Main End -->

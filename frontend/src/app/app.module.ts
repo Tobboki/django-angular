@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { GuideComponent } from './components/pages/guide/guide.component';
 import { CodeSnippetComponent } from './components/code-snippet/code-snippet.component';
+import { DocsComponent } from './components/pages/docs/docs.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CodeSnippetComponent } from './components/code-snippet/code-snippet.com
     NavbarComponent,
     HomeComponent,
     GuideComponent,
-    CodeSnippetComponent
+    CodeSnippetComponent,
+    DocsComponent
   ],
   imports: [
     BrowserModule,

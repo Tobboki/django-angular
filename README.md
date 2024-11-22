@@ -5,13 +5,13 @@ This project is a backend documentation website developed as a university assign
 ## Table of Contents
 
 - [PostDocs Project](#postdocs-project)
-  - [Table of Contents](#table-of-contents)
-  - [Project Overview](#project-overview)
-  - [Setup Instruction](#setup-instruction)
-  - [Features](#features)
-  - [Project Structure](#project-structure)
-  - [Technologies Used](#technologies-used)
-  - [Authors](#authors)
+- [Table of Contents](#table-of-contents)
+- [Project Overview](#project-overview)
+- [Setup Instruction](#setup-instruction)
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [Authors](#authors)
 
 ## Project Overview
 
@@ -169,4 +169,4 @@ Below is an outline of the directory structure:
 ## Authors
 
 - @Tobboki
-- @eldaly44
+- @Eldalye4

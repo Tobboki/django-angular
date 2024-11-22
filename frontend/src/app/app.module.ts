@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { GuideComponent } from './components/pages/guide/guide.component';
 import { CodeSnippetComponent } from './components/code-snippet/code-snippet.component';
 import { DocsComponent } from './components/pages/docs/docs.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { DocsComponent } from './components/pages/docs/docs.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,13 +7,15 @@ import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { GuideComponent } from './components/pages/guide/guide.component';
+import { CodeSnippetComponent } from './components/code-snippet/code-snippet.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    GuideComponent
+    GuideComponent,
+    CodeSnippetComponent
   ],
   imports: [
     BrowserModule,

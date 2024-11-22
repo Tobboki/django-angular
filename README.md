@@ -168,5 +168,5 @@ Below is an outline of the directory structure:
 
 ## Authors
 
-- @Tobboki
-- @Eldalye4
+- [Tobboki](https://github.com/Tobboki)
+- [Eldalye4](https://github.com/Eldalye4)

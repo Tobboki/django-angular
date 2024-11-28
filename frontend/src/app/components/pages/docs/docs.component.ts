@@ -205,9 +205,10 @@ fetch('https://localhost:8000/posts/1/comments')
       output:``
     },
   ]
-
+  // variable used to specify the active or on screen section
   activeSection: string = '';
 
+  // boolean to hide the Sidenav component when false!
   hideSidenav: boolean = true;
 
   constructor(
@@ -217,25 +218,19 @@ fetch('https://localhost:8000/posts/1/comments')
   ) {}
 
   ngOnInit(): void {
+    // Uses the fragment to specify the section
     this.route.fragment.subscribe((section) => {
       this.jumpToSection(section);
     });
+
   }
 
   ngAfterViewInit(): void {
+
+    // Use the prism lib to highlight and parse all the code snippets in the component
     this.prismService.highlightAll();
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            this.activeSection = entry.target.id;
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
+    // Hide Sidenav on certain breakpoints
     this.breakpointObserver
     .observe([Breakpoints.Large, Breakpoints.Tablet])
     .subscribe((result) => {
@@ -243,9 +238,11 @@ fetch('https://localhost:8000/posts/1/comments')
     });
   }
 
-  jumpToSection(section: string | null): void {
-    if (section) {
-      document.getElementById(section)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // Scrolls to to the specified section in the button text
+  jumpToSection(sectionId: string | null): void {
+    if (sectionId) {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+      this.activeSection = sectionId;
     }
   }
 }

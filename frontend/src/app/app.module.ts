@@ -10,6 +10,11 @@ import { GuideComponent } from './components/pages/guide/guide.component';
 import { CodeSnippetComponent } from './components/code-snippet/code-snippet.component';
 import { DocsComponent } from './components/pages/docs/docs.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {MatSidenav, MatSidenavContainer, MatSidenavContent, MatSidenavModule} from '@angular/material/sidenav';
+import { MatTree, MatTreeModule, MatTreeNode } from '@angular/material/tree';
+import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { MatButton, MatButtonModule } from '@angular/material/button';
+import { MatToolbar } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,15 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MatSidenavModule,
+    MatSidenav,
+    MatSidenavContent,
+    MatSidenavContainer,
+    MatButtonModule,
+    MatButton,
+    MatToolbar,
+    MatIcon
   ],
   providers: [
     provideAnimationsAsync()

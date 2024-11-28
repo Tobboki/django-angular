@@ -1,0 +1,10 @@
+.active {
+  background-color: #ddecfa;
+  color: white;
+}
+
+mat-sidenav {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}

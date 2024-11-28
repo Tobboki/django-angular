@@ -157,14 +157,16 @@ Below is an outline of the directory structure:
   - **Django REST Framework (DRF)**: For building RESTful APIs
   - **SQLite**: Default database for development (can be replaced with PostgreSQL or MySQL)
   - **Django CORS Headers**: To handle Cross-Origin Resource Sharing (CORS) between Angular and Django
-  - **Prism.js**: To highlight JS code and API responses for testing and documentation
   - **Postman**: For testing and verifying API endpoints
 
 - ### Frontend Technologies
 
   - **Angular**: TypeScript-based framework for building web applications
-  - **Bootstrap**: For responsive design (or any CSS framework/library of your choice)
+  - **Bootstrap**: For responsive and united design
+  - **Font Awesome**: For visual assets
   - **Node.js**: For package management with npm
+  - **Prism.js**: To highlight JS code and API responses for testing and documentation
+  - **Angular Material**: Using the built-in components for the API's Documentataion
 
 ## Authors
 

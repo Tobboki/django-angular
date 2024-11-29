@@ -23,4 +23,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('posts/<int:id>',views.post_detail),
     path('posts/',views.post_list),
+    
+    path('users/<int:id>',views.user_detail),
+    path('users/',views.User_list),
+
+    path('comments/<int:id>',views.comment_detail),
+    path('comments/',views.comment_list),
+    
 ]

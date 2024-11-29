@@ -7,10 +7,10 @@ import * as Prism from 'prismjs';
 export class PrismService {
   constructor() { }
   
-    // This method can be used to highlight code on the page after rendering
-    highlightAll(): void {
-      Prism.highlightAll();
-    }
+  // This method can be used to highlight code on the page after rendering
+  highlightAll(): void {
+    Prism.highlightAll();
+  }
 
   // This method highlights code in a certain element
   highlight(codeElement: HTMLElement): void {

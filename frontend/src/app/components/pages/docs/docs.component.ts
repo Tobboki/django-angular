@@ -61,7 +61,7 @@ export class DocsComponent implements OnInit, AfterViewInit {
       title: 'Getting a resource',
       code: `
 // This will return all the posts that belong to the first user
-fetch('https://localhost:8000/posts?userId=1')
+fetch('https://localhost:8000/posts/1')
   .then((response) => response.json())
   .then((json) => console.log(json));
       `,

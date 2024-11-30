@@ -4,7 +4,7 @@ from .models import Post ,User,comment
 class post_serializer(serializers.ModelSerializer):
     class Meta:
         model= Post
-        fields=['id','title','content','data','user']
+        fields=['id','title','content','user']
 
 class User_serializer(serializers.ModelSerializer):
     class Meta:
@@ -14,5 +14,5 @@ class User_serializer(serializers.ModelSerializer):
 class comment_serializer(serializers.ModelSerializer):
     class Meta:
         model= comment
-        fields = ['id', 'content', 'data', 'post','user']
+        fields = ['id', 'content', 'post','user']
 

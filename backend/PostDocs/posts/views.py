@@ -4,10 +4,28 @@ from .serializers import post_serializer,User_serializer,comment_serializer
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
+import requests
+
+# def userfa():
+
+#     url='https://jsonplaceholder.typicode.com/posts'
+#     response=requests.get(url)
+
+#     posts=response.json()
+#     for i in posts:
+#             user_instance =User.objects.get(id=i['userId'])
+      
+#             post, created = Post.objects.get_or_create(
+#                 title=i['title'],
+#                 content=i['body'],
+                
+#                 user=user_instance
+#                 )
 
 @api_view(['GET','POST'])
 def post_list(request):
     if request.method=='GET':
+        # userfa()
 
         posts=Post.objects.all()
         serializer=post_serializer(posts,many=True) 
@@ -42,9 +60,30 @@ def post_detail(request,id):
         Post1.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
     
+
+
+ 
+# def userfa():
+
+#         url='https://jsonplaceholder.org/users'
+#         response=requests.get(url)
+    
+        
+#         users=response.json()
+
+#         for i in users:
+                
+        
+#                 user, created = User.objects.get_or_create(
+#                     firstname=i['firstname'],
+#                     lastname=i['lastname'],
+                    
+#                     email=i['email'])
+            
 @api_view(['GET', 'POST'])
 def User_list(request):
     if request.method=='GET':
+        # userfa()
 
         Users=User.objects.all()
         serializer=User_serializer(Users,many=True) 
@@ -80,10 +119,31 @@ def user_detail(request,id):
         User1.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
     
-    
+
+
+def userfa():
+
+    url='https://jsonplaceholder.org/comments'
+    response=requests.get(url)
+   
+    if response.status_code == 200:
+        posts=response.json()
+        for i in posts:
+            
+                
+            user_instance =User.objects.get(id=i['userId'])
+            post_instance =Post.objects.get(id=i['postId'])
+            
+           
+            post, created = comment.objects.get_or_create(
+                content=i['comment'],
+                post=post_instance,
+                
+                user=user_instance  )
 @api_view(['GET', 'POST'])
 def comment_list(request):
     if request.method=='GET':
+        userfa()
 
         comments=comment.objects.all()
         serializer=comment_serializer(comments,many=True) 

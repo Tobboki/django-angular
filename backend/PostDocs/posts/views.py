@@ -121,29 +121,29 @@ def user_detail(request,id):
     
 
 
-def userfa():
+# def userfa():
 
-    url='https://jsonplaceholder.org/comments'
-    response=requests.get(url)
+#     url='https://jsonplaceholder.org/comments'
+#     response=requests.get(url)
    
-    if response.status_code == 200:
-        posts=response.json()
-        for i in posts:
+#     if response.status_code == 200:
+#         posts=response.json()
+#         for i in posts:
             
                 
-            user_instance =User.objects.get(id=i['userId'])
-            post_instance =Post.objects.get(id=i['postId'])
+#             user_instance =User.objects.get(id=i['userId'])
+#             post_instance =Post.objects.get(id=i['postId'])
             
            
-            post, created = comment.objects.get_or_create(
-                content=i['comment'],
-                post=post_instance,
+#             post, created = comment.objects.get_or_create(
+#                 content=i['comment'],
+#                 post=post_instance,
                 
-                user=user_instance  )
+#                 user=user_instance  )
 @api_view(['GET', 'POST'])
 def comment_list(request):
     if request.method=='GET':
-        userfa()
+        # userfa()
 
         comments=comment.objects.all()
         serializer=comment_serializer(comments,many=True) 

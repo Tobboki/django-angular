@@ -3,7 +3,7 @@ class Post(models.Model):
     
     title=models.CharField(max_length=100)
     content=models.TextField(max_length=100000)
-    data=models.DateField(auto_now_add=True)
+   
     user = models.ForeignKey('User', on_delete=models.CASCADE, related_name='posts') 
    
     def __str__(self):
@@ -24,7 +24,6 @@ class comment(models.Model):
    
     content=models.TextField(max_length=100000)
     
-    data=models.DateField(auto_now_add=True)
     post = models.ForeignKey('Post', on_delete=models.CASCADE, related_name='comments')
      
     user = models.ForeignKey('User', on_delete=models.CASCADE)
